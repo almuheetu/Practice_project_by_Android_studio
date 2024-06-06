@@ -20,4 +20,5 @@
     <string name="Cannot_divide_by_zero">cannot divide by zero</string>
     <string name="calculator_related">calculator_related</string>
     <string name="reminder_name">Reminder Name</string>
+    <string name="done">Done</string>
 </resources>
