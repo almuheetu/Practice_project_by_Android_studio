@@ -68,13 +68,20 @@ class MainActivity : AppCompatActivity() {
             binding.etTest.text.clear()
             binding.etSecondTest.text.clear()
             binding.etResult.text = ""
-
-            val intent = Intent(this, ThirdActivity::class.java)
-            startActivity(intent)
         }
 
         binding.equalBtn.setOnClickListener {
             binding.etResult.text = String.format(locale = Locale.US, "%.2f", result)
+        }
+
+        binding.secondActivityBtn.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.nextBtn.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
         }
     }
 

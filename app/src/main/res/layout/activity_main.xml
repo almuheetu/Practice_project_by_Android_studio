@@ -171,5 +171,30 @@
         android:textAllCaps="false"
         android:textSize="20sp" />
 
+
+    <Button
+        android:id="@+id/second_activity_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        app:backgroundTint="@color/grey"
+        android:layout_marginEnd="10dp"
+        android:text="@string/second_activity"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        app:backgroundTint="@color/blue"
+        android:layout_marginEnd="10dp"
+        android:text="@string/next"
+        android:textSize="20sp"/>
+
 </LinearLayout>
 

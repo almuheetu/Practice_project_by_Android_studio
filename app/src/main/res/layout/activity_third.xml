@@ -26,7 +26,7 @@
         app:layout_constraintBottom_toBottomOf="@id/img_banner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_banner"
-        app:srcCompat="@drawable/ic_circle" />
+        app:srcCompat="@drawable/star" />
 
     <TextView
         android:id="@+id/tv_title"

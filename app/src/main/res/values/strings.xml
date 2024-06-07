@@ -40,4 +40,6 @@
     <string name="discard">Discard</string>
     <string name="leica_m_typ_240">Leica M Typ 240</string>
     <string name="f_4_16s_iso_200">f/4 16s ISO 200</string>
+    <string name="next">Next</string>
+    <string name="second_activity">second activity</string>
 </resources>
