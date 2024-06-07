@@ -21,4 +21,13 @@
     <string name="calculator_related">calculator_related</string>
     <string name="reminder_name">Reminder Name</string>
     <string name="done">Done</string>
+    <string name="valuess">value</string>
+    <string name="resultsss">Result</string>
+    <string name="pluss">+</string>
+    <string name="minuss">-</string>
+    <string name="dividee">/</string>
+    <string name="multiplyee">*</string>
+    <string name="equall">=</string>
+    <string name="clearss">Clear</string>
+    <string name="calculator_logo">calculator logo</string>
 </resources>
