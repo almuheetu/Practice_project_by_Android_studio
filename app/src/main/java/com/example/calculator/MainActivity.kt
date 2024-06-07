@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             binding.etSecondTest.text.clear()
             binding.etResult.text = ""
 
-            val intent = Intent(this, SecondActivity::class.java)
+            val intent = Intent(this, ThirdActivity::class.java)
             startActivity(intent)
         }
 

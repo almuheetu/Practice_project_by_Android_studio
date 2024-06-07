@@ -30,4 +30,14 @@
     <string name="equall">=</string>
     <string name="clearss">Clear</string>
     <string name="calculator_logo">calculator logo</string>
+    <string name="singapore">Singapore</string>
+    <string name="Placeholder">placeholder\n\n</string>
+    <string name="camera">Camera</string>
+    <string name="singapure">Singapore</string>
+    <string name="settings">Settngs</string>
+    <string name="description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using .Content here, content here, making it look like readable English. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here making it look like readable English.</string>
+    <string name="upload">Upload</string>
+    <string name="discard">Discard</string>
+    <string name="leica_m_typ_240">Leica M Typ 240</string>
+    <string name="f_4_16s_iso_200">f/4 16s ISO 200</string>
 </resources>
