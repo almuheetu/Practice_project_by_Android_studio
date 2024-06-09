@@ -1,3 +1,5 @@
+@file:Suppress("ktlint:standard:filename")
+
 package com.example.calculator
 
 import android.os.Bundle

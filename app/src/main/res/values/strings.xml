@@ -42,4 +42,25 @@
     <string name="f_4_16s_iso_200">f/4 16s ISO 200</string>
     <string name="next">Next</string>
     <string name="second_activity">second activity</string>
+    <string name="_0">0</string>
+    <string name="Bracket">( )</string>
+    <string name="Percent">%</string>
+    <string name="Clearbtn">C</string>
+    <string name="divided">÷</string>
+    <string name="Seven">7</string>
+    <string name="Eight">8</string>
+    <string name="nine">9</string>
+    <string name="Multiply">×</string>
+    <string name="Equal">=</string>
+    <string name="Minus">-</string>
+    <string name="Plus">+</string>
+    <string name="Dot">.</string>
+    <string name="Zero">0</string>
+    <string name="PlusMinus">+/-</string>
+    <string name="Three">3</string>
+    <string name="Two">2</string>
+    <string name="One">1</string>
+    <string name="Four">4</string>
+    <string name="FIve">5</string>
+    <string name="Six">6</string>
 </resources>
