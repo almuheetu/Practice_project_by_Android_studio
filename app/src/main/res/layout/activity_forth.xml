@@ -7,7 +7,7 @@
     android:paddingEnd="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
- android:background="@color/green"
+    android:background="@color/green"
     android:paddingTop="50dp"
     tools:context=".ForthActivity"
     tools:ignore="RtlSymmetry">
@@ -45,41 +45,48 @@
         app:layout_constraintTop_toBottomOf="@+id/second_input" />
 
 
+
     <Button
         android:id="@+id/circularClearButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Clearbtn"
         android:textColor="@color/red"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result" />
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@id/circularBracketButton"/>
 
     <Button
         android:id="@+id/circularBracketButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="15dp"
         android:layout_marginTop="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Bracket"
         android:textColor="@color/green"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@id/circularClearButton"
+        app:layout_constraintEnd_toStartOf="@+id/circularPercentButton"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <Button
         android:id="@+id/circularPercentButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="15dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Percent"
         android:textColor="@color/green"
         android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/circularDivideButton"
         app:layout_constraintStart_toEndOf="@id/circularBracketButton"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
@@ -87,117 +94,131 @@
         android:id="@+id/circularDivideButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/divided"
         android:textColor="@color/green"
         android:textSize="40sp"
        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circularPercentButton"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <Button
         android:id="@+id/circularSevenButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Seven"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circularClearButton" />
+        app:layout_constraintTop_toBottomOf="@+id/circularClearButton"
+        app:layout_constraintEnd_toStartOf="@+id/circularEightButton"
+        />
 
     <Button
         android:id="@+id/circularEightButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="15dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Eight"
         android:textColor="@color/black"
         android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/circularNineButton"
         app:layout_constraintStart_toEndOf="@+id/circularSevenButton"
-        app:layout_constraintTop_toBottomOf="@+id/circularClearButton" />
+        app:layout_constraintTop_toBottomOf="@+id/circularBracketButton" />
 
     <Button
         android:id="@+id/circularNineButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/nine"
         android:textColor="@color/black"
         android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/circularMultiplyButton"
         app:layout_constraintStart_toEndOf="@+id/circularEightButton"
-        app:layout_constraintTop_toBottomOf="@+id/circularClearButton" />
+        app:layout_constraintTop_toBottomOf="@+id/circularPercentButton" />
 
     <Button
         android:id="@+id/circularMultiplyButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Multiply"
         android:textColor="@color/green"
         android:textSize="40sp"
-     app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/circularNineButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/circularClearButton" />
 
     <Button
         android:id="@+id/circularFourButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Four"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/circularFiveButton"
         app:layout_constraintTop_toBottomOf="@+id/circularSevenButton" />
 
     <Button
         android:id="@+id/circularFiveButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/FIve"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/circularFourButton"
-        app:layout_constraintTop_toBottomOf="@+id/circularSevenButton" />
+        app:layout_constraintEnd_toStartOf="@+id/circularSixButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularEightButton" />
 
     <Button
         android:id="@+id/circularSixButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Six"
         android:textColor="@color/black"
         android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/circularMinusButton"
         app:layout_constraintStart_toEndOf="@+id/circularFiveButton"
-        app:layout_constraintTop_toBottomOf="@+id/circularSevenButton" />
+        app:layout_constraintTop_toBottomOf="@+id/circularNineButton" />
 
     <Button
         android:id="@+id/circularMinusButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Minus"
         android:textColor="@color/green"
         android:textSize="40sp"
-        app:layout_constraintStart_toEndOf="@+id/circularSixButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circularSixButton"
         app:layout_constraintTop_toBottomOf="@+id/circularSevenButton" />
 
     <Button
@@ -216,14 +237,13 @@
         android:id="@+id/circularTwoButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="15dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Two"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/circularOneButton"
-        app:layout_constraintTop_toBottomOf="@+id/circularFourButton" />
+        app:layout_constraintTop_toBottomOf="@+id/circularFiveButton" />
 
     <Button
         android:id="@+id/circularThreeButton"
@@ -235,8 +255,8 @@
         android:text="@string/Three"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/circularTwoButton"
-        app:layout_constraintTop_toBottomOf="@+id/circularFourButton" />
+        app:layout_constraintEnd_toStartOf="@+id/circularPlusButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularSixButton" />
 
     <Button
         android:id="@+id/circularPlusButton"
@@ -248,7 +268,7 @@
         android:text="@string/Plus"
         android:textColor="@color/green"
         android:textSize="40sp"
-        app:layout_constraintStart_toEndOf="@+id/circularThreeButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/circularFourButton" />
 
 
