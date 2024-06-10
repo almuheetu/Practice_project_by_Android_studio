@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/parent_button_layout"
-    android:paddingBottom="16dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -207,7 +206,7 @@
         android:text="@string/Zero"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circularOneButton" />
+        app:layout_constraintTop_toBottomOf="@+id/circularTwoButton" />
 
     <Button
         android:id="@+id/circularEqualButton"
@@ -222,6 +221,11 @@
         app:layout_constraintEnd_toEndOf="@+id/circularPlusButton"
         app:layout_constraintStart_toStartOf="@+id/circularPlusButton"
         app:layout_constraintTop_toBottomOf="@+id/circularPlusButton"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circularZeroButton"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
