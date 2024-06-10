@@ -58,7 +58,7 @@
 
     <TextView
         android:id="@+id/result"
-        android:text="@string/resultsss"
+        android:text="@string/Results"
         android:layout_below="@+id/calculator_logo"
         android:layout_toEndOf="@+id/equalImg"
         android:textSize="20sp"

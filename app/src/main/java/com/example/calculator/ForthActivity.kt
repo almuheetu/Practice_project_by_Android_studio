@@ -1,4 +1,4 @@
-@file:Suppress("ktlint:standard:filename")
+@file:Suppress("kt lint:standard:filename")
 
 package com.example.calculator
 
