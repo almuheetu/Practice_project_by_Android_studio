@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_button_layout"
+    android:paddingBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <Button
+        android:id="@+id/circularClearButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/clearBtn"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@id/circularBracketButton"/>
+
+    <Button
+        android:id="@+id/circularBracketButton"
+        style="@style/Theme.Calculator.Operator.Button"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Bracket"
+        app:layout_constraintStart_toEndOf="@id/circularClearButton"
+        app:layout_constraintEnd_toStartOf="@+id/circularPercentButton"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+    <Button
+        android:id="@+id/circularPercentButton"
+        style="@style/Theme.Calculator.Operator.Button"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Percent"
+        app:layout_constraintEnd_toStartOf="@id/circularDivideButton"
+        app:layout_constraintStart_toEndOf="@id/circularBracketButton"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+    <Button
+        android:id="@+id/circularDivideButton"
+        style="@style/Theme.Calculator.Operator.Button"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/divided"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circularPercentButton"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        tools:ignore="UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/circularSevenButton"
+        style="@style/Theme.Number.Button"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/Seven"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circularClearButton"
+        app:layout_constraintEnd_toStartOf="@+id/circularEightButton"
+        />
+
+    <Button
+        android:id="@+id/circularEightButton"
+        style="@style/Theme.Number.Button"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Eight"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/circularNineButton"
+        app:layout_constraintStart_toEndOf="@+id/circularSevenButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularBracketButton" />
+
+    <Button
+        android:id="@+id/circularNineButton"
+        style="@style/Theme.Number.Button"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/nine"
+        app:layout_constraintEnd_toStartOf="@+id/circularMultiplyButton"
+        app:layout_constraintStart_toEndOf="@+id/circularEightButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularPercentButton" />
+
+    <Button
+        android:id="@+id/circularMultiplyButton"
+        style="@style/Theme.Calculator.Operator.Button"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Multiply"
+        app:layout_constraintStart_toEndOf="@+id/circularNineButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circularClearButton" />
+
+    <Button
+        android:id="@+id/circularFourButton"
+        style="@style/Theme.Number.Button"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Four"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/circularFiveButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularSevenButton" />
+
+    <Button
+        android:id="@+id/circularFiveButton"
+        style="@style/Theme.Number.Button"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/FIve"
+        app:layout_constraintStart_toEndOf="@+id/circularFourButton"
+        app:layout_constraintEnd_toStartOf="@+id/circularSixButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularEightButton" />
+
+    <Button
+        android:id="@+id/circularSixButton"
+        style="@style/Theme.Number.Button"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Six"
+        app:layout_constraintEnd_toStartOf="@+id/circularMinusButton"
+        app:layout_constraintStart_toEndOf="@+id/circularFiveButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularNineButton" />
+
+    <Button
+        android:id="@+id/circularMinusButton"
+        style="@style/Theme.Calculator.Operator.Button"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circularSixButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularSevenButton" />
+
+    <Button
+        android:id="@+id/circularOneButton"
+        style="@style/Theme.Number.Button"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/One"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/circularTwoButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularFourButton" />
+
+    <Button
+        android:id="@+id/circularTwoButton"
+        style="@style/Theme.Number.Button"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Two"
+        app:layout_constraintStart_toEndOf="@+id/circularOneButton"
+        app:layout_constraintEnd_toStartOf="@+id/circularThreeButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularFiveButton" />
+
+    <Button
+        android:id="@+id/circularThreeButton"
+        style="@style/Theme.Number.Button"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Three"
+        app:layout_constraintEnd_toStartOf="@+id/circularPlusButton"
+        app:layout_constraintStart_toEndOf="@+id/circularTwoButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularSixButton" />
+
+    <Button
+        android:id="@+id/circularPlusButton"
+        style="@style/Theme.Calculator.Operator.Button"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circularThreeButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularFourButton" />
+
+
+    <Button
+        android:id="@+id/circularZeroButton"
+        style="@style/Theme.Number.Button"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_button_background"
+        android:text="@string/Zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circularOneButton" />
+
+    <Button
+        android:id="@+id/circularEqualButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_button_background"
+        android:backgroundTint="@color/green"
+        android:text="@string/Equal"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/circularPlusButton"
+        app:layout_constraintStart_toStartOf="@+id/circularPlusButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularPlusButton"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,20 @@
     </style>
 
     <style name="Theme.Calculator" parent="Base.Theme.Calculator" />
+
+    <style name="Theme.Number.Button" parent="ShapeAppearanceOverlay.Material3.Button" >
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/circular_button_background</item>
+    </style>
+    <style name="Theme.Calculator.Operator.Button" parent="Theme.Number.Button" >
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">@drawable/circular_button_background</item>
+    </style>
+
 </resources>
