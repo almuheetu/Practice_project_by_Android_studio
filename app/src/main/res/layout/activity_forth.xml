@@ -165,8 +165,8 @@
 
     <Button
         android:id="@+id/circularFourButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/circular_button_background"
@@ -179,8 +179,8 @@
 
     <Button
         android:id="@+id/circularFiveButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginTop="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -194,8 +194,8 @@
 
     <Button
         android:id="@+id/circularSixButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="16dp"
@@ -209,8 +209,8 @@
 
     <Button
         android:id="@+id/circularMinusButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circular_button_background"
@@ -226,11 +226,13 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/One"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/circularTwoButton"
         app:layout_constraintTop_toBottomOf="@+id/circularFourButton" />
 
     <Button
@@ -238,37 +240,43 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Two"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/circularOneButton"
+        app:layout_constraintEnd_toStartOf="@+id/circularThreeButton"
         app:layout_constraintTop_toBottomOf="@+id/circularFiveButton" />
 
     <Button
         android:id="@+id/circularThreeButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Three"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/circularPlusButton"
+        app:layout_constraintStart_toEndOf="@+id/circularTwoButton"
         app:layout_constraintTop_toBottomOf="@+id/circularSixButton" />
 
     <Button
         android:id="@+id/circularPlusButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Plus"
         android:textColor="@color/green"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circularThreeButton"
         app:layout_constraintTop_toBottomOf="@+id/circularFourButton" />
 
 
@@ -295,9 +303,9 @@
         android:text="@string/Equal"
         android:textColor="@color/white"
         android:textSize="40sp"
-    app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circularPlusButton"
-        app:flow_horizontalAlign="center"/>
+        app:layout_constraintEnd_toEndOf="@+id/circularPlusButton"
+        app:layout_constraintStart_toStartOf="@+id/circularPlusButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularPlusButton"/>
 
 
 
