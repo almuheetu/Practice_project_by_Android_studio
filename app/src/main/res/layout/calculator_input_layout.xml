@@ -13,7 +13,6 @@
         android:layout_height="48dp"
         android:autofillHints="null"
         android:hint="@string/value"
-        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +22,6 @@
         android:layout_height="48dp"
         android:autofillHints="null"
         android:hint="@string/value"
-        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/first_input" />
 

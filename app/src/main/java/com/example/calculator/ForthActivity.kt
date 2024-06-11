@@ -14,6 +14,7 @@ class ForthActivity : AppCompatActivity() {
     private var firstInput: String = ""
     private var secondInput: String = ""
     private var result: Double = 0.0
+    private var firstInputFocuse: Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +26,7 @@ class ForthActivity : AppCompatActivity() {
             insets
         }
 
-//       firstInput
+
         binding.inputLayoutId.firstInput.setOnClickListener {
             Toast.makeText(this, "input your first value", Toast.LENGTH_SHORT).show()
         }
@@ -71,6 +72,59 @@ class ForthActivity : AppCompatActivity() {
             binding.inputLayoutId.firstInput.text = firstInput
         }
 
-//        secondInput
+
+
+        binding.inputLayoutId.secondInput.setOnClickListener {
+            Toast.makeText(this, "input your second value", Toast.LENGTH_SHORT).show()
+        }
+        binding.parentButtonLayout.circularSevenButton.setOnClickListener {
+            secondInput = secondInput.plus("7")
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+        binding.parentButtonLayout.circularEightButton.setOnClickListener {
+            secondInput = secondInput.plus("8")
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+        binding.parentButtonLayout.circularNineButton.setOnClickListener {
+            secondInput = secondInput.plus("9")
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+        binding.parentButtonLayout.circularFourButton.setOnClickListener {
+            secondInput = secondInput.plus("4")
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+        binding.parentButtonLayout.circularFiveButton.setOnClickListener {
+            secondInput = secondInput.plus("5")
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+        binding.parentButtonLayout.circularSixButton.setOnClickListener {
+            secondInput = secondInput.plus("6")
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+        binding.parentButtonLayout.circularOneButton.setOnClickListener {
+            secondInput = secondInput.plus("1")
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+        binding.parentButtonLayout.circularTwoButton.setOnClickListener {
+            secondInput = secondInput.plus("2")
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+        binding.parentButtonLayout.circularThreeButton.setOnClickListener {
+            secondInput = secondInput.plus("3")
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+        binding.parentButtonLayout.circularZeroButton.setOnClickListener {
+            secondInput = secondInput.plus("0")
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+
+        binding.parentButtonLayout.circularClearButton.setOnClickListener {
+            firstInput = ""
+            secondInput = ""
+            binding.inputLayoutId.firstInput.text = firstInput
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+
     }
+
 }
