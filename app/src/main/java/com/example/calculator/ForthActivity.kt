@@ -14,7 +14,7 @@ class ForthActivity : AppCompatActivity() {
     private var firstInput: String = ""
     private var secondInput: String = ""
     private var result: Double = 0.0
-    private var firstInputFocuse: Boolean = true
+    private var isFirstInputFocuse: Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,105 +26,114 @@ class ForthActivity : AppCompatActivity() {
             insets
         }
 
-
         binding.inputLayoutId.firstInput.setOnClickListener {
+            isFirstInputFocuse = true
+
             Toast.makeText(this, "input your first value", Toast.LENGTH_SHORT).show()
         }
 
-        binding.parentButtonLayout.circularSevenButton.setOnClickListener {
-            firstInput = firstInput.plus("7")
-            binding.inputLayoutId.firstInput.text = firstInput
-        }
-        binding.parentButtonLayout.circularEightButton.setOnClickListener {
-            firstInput = firstInput.plus("8")
-            binding.inputLayoutId.firstInput.text = firstInput
-        }
-        binding.parentButtonLayout.circularNineButton.setOnClickListener {
-            firstInput = firstInput.plus("9")
-            binding.inputLayoutId.firstInput.text = firstInput
-        }
-        binding.parentButtonLayout.circularFourButton.setOnClickListener {
-            firstInput = firstInput.plus("4")
-            binding.inputLayoutId.firstInput.text = firstInput
-        }
-        binding.parentButtonLayout.circularFiveButton.setOnClickListener {
-            firstInput = firstInput.plus("5")
-            binding.inputLayoutId.firstInput.text = firstInput
-        }
-        binding.parentButtonLayout.circularSixButton.setOnClickListener {
-            firstInput = firstInput.plus("6")
-            binding.inputLayoutId.firstInput.text = firstInput
-        }
-        binding.parentButtonLayout.circularOneButton.setOnClickListener {
-            firstInput = firstInput.plus("1")
-            binding.inputLayoutId.firstInput.text = firstInput
-        }
-        binding.parentButtonLayout.circularTwoButton.setOnClickListener {
-            firstInput = firstInput.plus("2")
-            binding.inputLayoutId.firstInput.text = firstInput
-        }
-        binding.parentButtonLayout.circularThreeButton.setOnClickListener {
-            firstInput = firstInput.plus("3")
-            binding.inputLayoutId.firstInput.text = firstInput
-        }
-        binding.parentButtonLayout.circularZeroButton.setOnClickListener {
-            firstInput = firstInput.plus("0")
-            binding.inputLayoutId.firstInput.text = firstInput
-        }
-
-
-
         binding.inputLayoutId.secondInput.setOnClickListener {
+            isFirstInputFocuse = false
             Toast.makeText(this, "input your second value", Toast.LENGTH_SHORT).show()
         }
+
         binding.parentButtonLayout.circularSevenButton.setOnClickListener {
-            secondInput = secondInput.plus("7")
-            binding.inputLayoutId.secondInput.text = secondInput
+            setValueInputField("7", isFirstInputFocuse)
         }
+
         binding.parentButtonLayout.circularEightButton.setOnClickListener {
-            secondInput = secondInput.plus("8")
-            binding.inputLayoutId.secondInput.text = secondInput
+            setValueInputField("8", isFirstInputFocuse)
         }
+
         binding.parentButtonLayout.circularNineButton.setOnClickListener {
-            secondInput = secondInput.plus("9")
-            binding.inputLayoutId.secondInput.text = secondInput
+            setValueInputField("9", isFirstInputFocuse)
         }
         binding.parentButtonLayout.circularFourButton.setOnClickListener {
-            secondInput = secondInput.plus("4")
-            binding.inputLayoutId.secondInput.text = secondInput
+            setValueInputField("4", isFirstInputFocuse)
         }
         binding.parentButtonLayout.circularFiveButton.setOnClickListener {
-            secondInput = secondInput.plus("5")
-            binding.inputLayoutId.secondInput.text = secondInput
+            setValueInputField("5", isFirstInputFocuse)
         }
         binding.parentButtonLayout.circularSixButton.setOnClickListener {
-            secondInput = secondInput.plus("6")
-            binding.inputLayoutId.secondInput.text = secondInput
+            setValueInputField("6", isFirstInputFocuse)
         }
         binding.parentButtonLayout.circularOneButton.setOnClickListener {
-            secondInput = secondInput.plus("1")
-            binding.inputLayoutId.secondInput.text = secondInput
+            setValueInputField("1", isFirstInputFocuse)
         }
         binding.parentButtonLayout.circularTwoButton.setOnClickListener {
-            secondInput = secondInput.plus("2")
-            binding.inputLayoutId.secondInput.text = secondInput
+            setValueInputField("2", isFirstInputFocuse)
         }
         binding.parentButtonLayout.circularThreeButton.setOnClickListener {
-            secondInput = secondInput.plus("3")
-            binding.inputLayoutId.secondInput.text = secondInput
+            setValueInputField("3", isFirstInputFocuse)
         }
         binding.parentButtonLayout.circularZeroButton.setOnClickListener {
-            secondInput = secondInput.plus("0")
-            binding.inputLayoutId.secondInput.text = secondInput
+            setValueInputField("0", isFirstInputFocuse)
         }
 
+        binding.parentButtonLayout.circularPlusButton.setOnClickListener {
+            plusButton()
+        }
+        binding.parentButtonLayout.circularMinusButton.setOnClickListener {
+            minusButton()
+        }
+        binding.parentButtonLayout.circularMultiplyButton.setOnClickListener {
+            multiplyButton()
+        }
         binding.parentButtonLayout.circularClearButton.setOnClickListener {
-            firstInput = ""
-            secondInput = ""
-            binding.inputLayoutId.firstInput.text = firstInput
-            binding.inputLayoutId.secondInput.text = secondInput
+            clearInputs()
         }
-
+        binding.parentButtonLayout.circularDivideButton.setOnClickListener {
+            divideButton()
+        }
     }
 
+    private fun setValueInputField(
+        value: String,
+        firstInputFocuse: Boolean,
+    ) {
+        Toast.makeText(this, firstInputFocuse.toString(), Toast.LENGTH_SHORT).show()
+        if (firstInputFocuse) {
+            firstInput = firstInput.plus(value)
+            binding.inputLayoutId.firstInput.text = firstInput
+        } else {
+            secondInput = secondInput.plus(value)
+            binding.inputLayoutId.secondInput.text = secondInput
+        }
+    }
+
+    private fun clearInputs() {
+        firstInput = ""
+        secondInput = ""
+        binding.inputLayoutId.firstInput.text = ""
+        binding.inputLayoutId.secondInput.text = ""
+        binding.result.text = ""
+    }
+
+    fun plusButton() {
+        val firstNumber = firstInput.toDouble()
+        val secondNumber = secondInput.toDouble()
+        val result = firstNumber + secondNumber
+        binding.result.text = result.toString()
+    }
+
+    fun minusButton() {
+        val firstNumber = firstInput.toDouble()
+        val secondNumber = secondInput.toDouble()
+        val result = firstNumber - secondNumber
+        binding.result.text = result.toString()
+    }
+
+    fun multiplyButton() {
+        val firstNumber = firstInput.toDouble()
+        val secondNumber = secondInput.toDouble()
+        val result = firstNumber * secondNumber
+        binding.result.text = result.toString()
+    }
+
+    fun divideButton() {
+        val firstNumber = firstInput.toDouble()
+        val secondNumber = secondInput.toDouble()
+        val result = firstNumber / secondNumber
+        binding.result.text = result.toString()
+    }
 }
