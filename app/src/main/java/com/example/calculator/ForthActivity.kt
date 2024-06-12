@@ -3,6 +3,7 @@
 package com.example.calculator
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,6 +18,7 @@ class ForthActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("log404", "onCreate: ")
         binding = ActivityForthBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -144,5 +146,35 @@ class ForthActivity : AppCompatActivity() {
         val secondNumber = secondInput.toDouble()
         val result = firstNumber % secondNumber
         binding.result.text = result.toString()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("log404", "onStart: ")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Toast.makeText(this, "Open the screen", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("log404", "onPause: ")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("log404", "onStop: ")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("log404", "onRestart: ")
+    }
+
+    override fun onDestroy() {
+        Toast.makeText(this, "Close the screen", Toast.LENGTH_SHORT).show()
+        super.onDestroy()
     }
 }
