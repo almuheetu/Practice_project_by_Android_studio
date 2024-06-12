@@ -85,6 +85,9 @@ class ForthActivity : AppCompatActivity() {
         binding.parentButtonLayout.circularDivideButton.setOnClickListener {
             divideButton()
         }
+        binding.parentButtonLayout.circularPercentButton.setOnClickListener {
+            percentButton()
+        }
     }
 
     private fun setValueInputField(
@@ -134,6 +137,13 @@ class ForthActivity : AppCompatActivity() {
         val firstNumber = firstInput.toDouble()
         val secondNumber = secondInput.toDouble()
         val result = firstNumber / secondNumber
+        binding.result.text = result.toString()
+    }
+
+    fun percentButton() {
+        val firstNumber = firstInput.toDouble()
+        val secondNumber = secondInput.toDouble()
+        val result = firstNumber % secondNumber
         binding.result.text = result.toString()
     }
 }

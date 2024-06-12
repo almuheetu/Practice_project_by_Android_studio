@@ -21,19 +21,9 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result"
-        app:layout_constraintEnd_toStartOf="@id/circularBracketButton"/>
+        app:layout_constraintEnd_toStartOf="@id/circularPercentButton"
+        app:layout_constraintBottom_toTopOf="@+id/circularNineButton"/>
 
-    <Button
-        android:id="@+id/circularBracketButton"
-        style="@style/Theme.Calculator.Operator.Button"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/circular_button_background"
-        android:text="@string/Bracket"
-        app:layout_constraintStart_toEndOf="@id/circularClearButton"
-        app:layout_constraintEnd_toStartOf="@+id/circularPercentButton"
-        app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <Button
         android:id="@+id/circularPercentButton"
@@ -44,7 +34,7 @@
         android:background="@drawable/circular_button_background"
         android:text="@string/Percent"
         app:layout_constraintEnd_toStartOf="@id/circularDivideButton"
-        app:layout_constraintStart_toEndOf="@id/circularBracketButton"
+        app:layout_constraintStart_toEndOf="@id/circularClearButton"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <Button
@@ -56,8 +46,8 @@
         android:text="@string/divided"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/circularPercentButton"
-        app:layout_constraintTop_toBottomOf="@+id/result"
-        tools:ignore="UnknownIdInLayout" />
+        app:layout_constraintBottom_toBottomOf="@+id/circularMultiplyButton"
+     />
 
     <Button
         android:id="@+id/circularSevenButton"
@@ -80,7 +70,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/circularNineButton"
         app:layout_constraintStart_toEndOf="@+id/circularSevenButton"
-        app:layout_constraintTop_toBottomOf="@+id/circularBracketButton" />
+        app:layout_constraintTop_toBottomOf="@+id/circularClearButton" />
 
     <Button
         android:id="@+id/circularNineButton"
@@ -101,9 +91,11 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/circular_button_background"
         android:text="@string/Multiply"
-        app:layout_constraintStart_toEndOf="@+id/circularNineButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circularClearButton" />
+        app:layout_constraintStart_toEndOf="@+id/circularSixButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularDivideButton"
+        app:layout_constraintBottom_toTopOf="@+id/circularMinusButton"
+        />
 
     <Button
         android:id="@+id/circularFourButton"
@@ -148,8 +140,9 @@
         android:background="@drawable/circular_button_background"
         android:text="@string/Minus"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/circularSixButton"
-        app:layout_constraintTop_toBottomOf="@+id/circularSevenButton" />
+        app:layout_constraintStart_toEndOf="@id/circularThreeButton"
+        app:layout_constraintTop_toBottomOf="@+id/circularMultiplyButton"
+        app:layout_constraintBottom_toTopOf="@+id/circularPlusButton"/>
 
     <Button
         android:id="@+id/circularOneButton"
@@ -195,7 +188,8 @@
         android:text="@string/Plus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/circularThreeButton"
-        app:layout_constraintTop_toBottomOf="@+id/circularFourButton" />
+        app:layout_constraintTop_toBottomOf="@+id/circularMinusButton"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
     <Button
@@ -208,19 +202,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/circularTwoButton" />
 
-    <Button
-        android:id="@+id/circularEqualButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/circular_button_background"
-        android:backgroundTint="@color/green"
-        android:text="@string/Equal"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="@+id/circularPlusButton"
-        app:layout_constraintStart_toStartOf="@+id/circularPlusButton"
-        app:layout_constraintTop_toBottomOf="@+id/circularPlusButton"/>
     <View
         android:layout_width="wrap_content"
         android:layout_height="16dp"
