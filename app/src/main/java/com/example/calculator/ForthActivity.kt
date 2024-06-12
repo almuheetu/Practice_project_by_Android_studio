@@ -13,7 +13,6 @@ class ForthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityForthBinding
     private var firstInput: String = ""
     private var secondInput: String = ""
-    private var result: Double = 0.0
     private var isFirstInputFocuse: Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
